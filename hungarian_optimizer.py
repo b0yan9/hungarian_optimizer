@@ -46,7 +46,7 @@ class HungarianOptimizer:
                 if self.__is_starred(row, col):
                     assignments.append([row, col])
                     break
-        return assignments
+        return np.array(assignments).reshape([-1, 2])
     def __reduce_rows(self):
         """
         Step 1. 
